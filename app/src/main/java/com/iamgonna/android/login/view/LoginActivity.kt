@@ -1,6 +1,7 @@
 package com.iamgonna.android.login.view
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,10 +12,12 @@ import com.iamgonna.android.signUp.view.SignUpActivity
 
 class LoginActivity : AppCompatActivity() {
     private val binding by lazy { ActivityLoginBinding.inflate(layoutInflater) }
+
     private val viewModel = LoginViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         binding.run {
             btnLogin.setOnClickListener {
                 viewModel.login(etInputEmail.text.toString(), etInputPw.text.toString())
