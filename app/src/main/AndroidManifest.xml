@@ -11,14 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IamGonna">
         <activity
-            android:name=".MainActivity"
+            android:name=".login.view.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".signUp.view.SignUpActivity"/>
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="1310y3ukwm" />

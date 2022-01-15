@@ -1,0 +1,6 @@
+package com.iamgonna.android.login.model
+
+data class LoginRequest(
+    var email : String,
+    var password : String
+)
