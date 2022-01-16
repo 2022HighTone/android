@@ -10,4 +10,10 @@
     <string name="tv_check_pw">비밀번호가 맞지 않아요</string>
     <string name="tv_school_name">학교이름</string>
     <string name="search">검색</string>
+    <string name="category">카테고리</string>
+    <string name="choice_all">전체 선택</string>
+    <string name="tv_price">가격대</string>
+    <string name="tv_0won">0원</string>
+    <string name="tv_2man_won">20,000원</string>
+    <string name="tv_pay">0원 ~5000원</string>
 </resources>

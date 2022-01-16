@@ -7,15 +7,19 @@ import com.iamgonna.android.signUp.model.SignUpRequest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SignUpViewModel : ViewModel() {
     private val io = Dispatchers.IO
+    private val ui = Dispatchers.Main
     val signUpResponse = MutableLiveData<Int>()
     fun signUp(username : String, email : String, pw:String){
         val signUpApi = RetrofitClient.instance.signUp
         CoroutineScope(io).launch {
             val response = signUpApi.signUp(SignUpRequest(username, email, pw))
-            signUpResponse.value = response.code()
+            withContext(ui){
+                signUpResponse.value = response.code()
+            }
         }
     }
 }

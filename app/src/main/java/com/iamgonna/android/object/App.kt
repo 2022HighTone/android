@@ -1,7 +1,6 @@
 package com.iamgonna.android.`object`
 
 import android.app.Application
-import com.iamgonna.android.PreferenceUtil
 
 class App : Application() {
     companion object
@@ -11,7 +10,7 @@ class App : Application() {
 
     override fun onCreate()
     {
-        super.onCreate()
         prefs = PreferenceUtil(applicationContext)
+        super.onCreate()
     }
 }
